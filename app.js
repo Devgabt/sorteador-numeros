@@ -15,7 +15,8 @@ function sortear() {
     }
 
     resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${numerosSorteados}</label>`
-    reiniciar();
+    alterarStatusBotao();
+    
 }
 
 function gerarNumeroAleatorio(de, ate) {
@@ -30,4 +31,10 @@ function reiniciar() {
         let campo = document.getElementById(id);
         campo.value = '';
     });
+
+}
+
+function alterarStatusBotao(){
+    let botaoReiniciar = document.getElementById('btn-reiniciar');
+    botaoReiniciar.className = 'container__botao';
 }
